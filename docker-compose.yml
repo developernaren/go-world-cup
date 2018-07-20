@@ -1,0 +1,11 @@
+version: '3'
+services:
+  worldcup.go:
+    container_name: worldcup.go
+    build: ./
+    environment:
+      - APP_ENV=dev
+    volumes:
+      - ./app:/go/src/github.com/user/worldcup.go/app
+    ports:
+      - "3000:8080"
